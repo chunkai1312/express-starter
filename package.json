@@ -1,0 +1,40 @@
+{
+  "name": "express-starter",
+  "version": "1.0.0",
+  "description": "A seed project for Express server application",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js",
+    "test": "cross-env NODE_ENV=test mocha test/**/*.test.js",
+    "lint": "eslint api config"
+  },
+  "author": "Chun-Kai Wang <chunkai1312@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "api-error-handler": "^1.0.0",
+    "body-parser": "^1.15.2",
+    "co-express": "^1.2.1",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "http-errors": "^1.5.0",
+    "lodash": "^4.13.1",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.5.3",
+    "morgan": "^1.7.0",
+    "winston": "^2.2.0",
+    "winston-daily-rotate-file": "^1.1.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cross-env": "^1.0.8",
+    "eslint": "^3.0.1",
+    "eslint-config-airbnb-base": "^4.0.0",
+    "eslint-plugin-import": "^1.10.2",
+    "mocha": "^2.5.3",
+    "nodemon": "^1.9.2",
+    "supertest": "^1.2.0",
+    "supertest-as-promised": "^3.2.0"
+  }
+}

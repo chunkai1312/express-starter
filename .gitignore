@@ -1,0 +1,6 @@
+/.vscode/
+/logs/
+/apidoc/
+/node_modules/
+npm-debug.log
+.DS_Store
