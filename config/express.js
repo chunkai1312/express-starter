@@ -11,6 +11,9 @@ const config = require('../config');
 const logger = require('./logger');
 
 module.exports = function (app) {
+  app.set('views', path.join(__dirname, 'views'));
+  app.set('view engine', 'hbs');
+
   app.use(compression());
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
