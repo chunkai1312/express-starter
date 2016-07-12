@@ -2,6 +2,7 @@
 
 const path = require('path');
 const express = require('express');
+const hbs = require('hbs');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -11,8 +12,9 @@ const config = require('../config');
 const logger = require('./logger');
 
 module.exports = function (app) {
-  app.set('views', path.join(__dirname, 'views'));
-  app.set('view engine', 'hbs');
+  app.set('views', path.join(config.root, 'app', 'views'));
+  app.set('view engine', 'html');
+  app.engine('html', hbs.__express);
 
   app.use(compression());
   app.use(bodyParser.urlencoded({ extended: true }));

@@ -1,8 +1,8 @@
 'use strict'; /* eslint new-cap: 0 */
 
 const express = require('express');
-const router = express.Router();
 const thing = require('./controllers/thing');
+const router = express.Router();
 
 router.get('/things', thing.index);
 router.post('/things', thing.create);
