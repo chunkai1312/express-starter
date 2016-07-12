@@ -8,7 +8,7 @@
 - Use [MongoDB](https://www.mongodb.com/) for the database and [Mongoose](https://github.com/Automattic/mongoose) ODM for schema creation
 - Introduce [co-express](https://github.com/mciparelli/co-express) to enable generators to be used as middlewares
 - Use [winston](https://github.com/winstonjs/winston) for logging errors and events
-- Use [hbs](https://github.com/donpark/hbs) handlebars as view engine
+- Use [hbs](https://github.com/donpark/hbs) as view engine
 - Use [nodemon](https://github.com/remy/nodemon) for watching and restarting
 - Use [Mocha](https://github.com/mochajs/mocha) as test framework
 
