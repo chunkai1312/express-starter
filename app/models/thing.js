@@ -1,4 +1,4 @@
-'use strict';  /* eslint no-unused-vars: 0 */
+'use strict';
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;

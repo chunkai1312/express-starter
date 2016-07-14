@@ -1,4 +1,4 @@
-'use strict';  /* eslint no-unused-vars: 0 */
+'use strict';
 
 const path = require('path');
 const winston = require('winston');
