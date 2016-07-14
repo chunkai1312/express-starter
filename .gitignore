@@ -1,6 +1,4 @@
-/.vscode/
-/logs/
-/apidoc/
-/node_modules/
+node_modules
 npm-debug.log
+logs/*
 .DS_Store
