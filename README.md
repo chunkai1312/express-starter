@@ -16,13 +16,13 @@
 
 ### Setup
 
-```shell
+```
 $ npm install
 ```
 
 ### Developing
 
-```shell
+```
 $ npm run dev
 ```
 
@@ -37,7 +37,6 @@ $ npm start
 ```
 $ npm test
 ```
-
 
 ## License
 
