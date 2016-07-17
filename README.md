@@ -1,6 +1,6 @@
 # express-starter
 
-> A seed project for Express server application
+> A seed project for building web applications using Express with MongoDB
 
 ## Features
 
