@@ -2,7 +2,8 @@
 
 const path = require('path');
 const express = require('express');
-const hbs = require('hbs');
+const ejs = require('ejs');
+const expressLayouts = require('express-ejs-layouts');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -14,7 +15,9 @@ const logger = require('./logger');
 module.exports = function (app) {
   app.set('views', path.join(config.root, 'app', 'views'));
   app.set('view engine', 'html');
-  app.engine('html', hbs.__express);
+  app.engine('html', ejs.renderFile);
+  app.use(express.static(`${config.root}/public`));
+  app.use(expressLayouts);
 
   app.use(compression());
   app.use(bodyParser.urlencoded({ extended: true }));
