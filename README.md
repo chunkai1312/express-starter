@@ -7,7 +7,7 @@
 - MVC style file structure
 - Use [MongoDB](https://www.mongodb.com/) for the database and [Mongoose](https://github.com/Automattic/mongoose) ODM for schema creation
 - Introduce [co-express](https://github.com/mciparelli/co-express) to enable generators to be used as middlewares
-- Use [hbs](https://github.com/donpark/hbs) as view engine
+- Use [ejs](https://github.com/mde/ejs) as view engine and [express-ejs-layouts](https://github.com/Soarez/express-ejs-layouts) to support for layouts
 - Use [winston](https://github.com/winstonjs/winston) for logging errors and events
 - Use [nodemon](https://github.com/remy/nodemon) for watching and restarting
 - Use [Mocha](https://github.com/mochajs/mocha) as test framework
