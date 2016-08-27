@@ -1,4 +1,4 @@
-# express-starter
+# express-starter [![JavaScript Style Guide][standardjs-image]][standardjs-url]
 
 > A seed project for building web applications using Express with MongoDB
 
@@ -41,3 +41,6 @@ $ npm test
 ## License
 
 MIT © [Chun-Kai Wang](https://github.com/chunkai1312)
+
+[standardjs-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
+[standardjs-url]: http://standardjs.com/
