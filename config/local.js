@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const path = require('path');
+const path = require('path')
 
 module.exports = {
 
@@ -14,6 +14,6 @@ module.exports = {
   ip: process.env.IP || '127.0.0.1',
 
   // Root path of server
-  root: path.normalize(`${__dirname}/..`),
+  root: path.normalize(`${__dirname}/..`)
 
-};
+}
