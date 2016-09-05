@@ -28,10 +28,10 @@ describe('Thing API:', () => {
         .expect('Content-Type', /json/)
         .expect(201)
         .then(res => {
+          expect(res.body).to.have.property('id')
+          expect(res.body).to.have.property('name').that.equal('New Thing')
+          expect(res.body).to.have.property('info').that.equal('This is the brand new thing!!!')
           thing = res.body
-          expect(thing).to.have.property('id')
-          expect(thing).to.have.property('name').that.equal('New Thing')
-          expect(thing).to.have.property('info').that.equal('This is the brand new thing!!!')
         })
     })
   })
