@@ -1,6 +1,8 @@
 'use strict'
 
 const errorhandler = require('errorhandler')
+const expressWinston = require('express-winston')
+const logger = require('./logger')
 const thing = require('../app/controllers/thing')
 
 module.exports = function (app) {
@@ -20,5 +22,7 @@ module.exports = function (app) {
   })
 
   // error handler
-  app.use(errorhandler())
+  app.get('env') === 'development'
+    ? app.use(errorhandler())
+    : app.use(expressWinston.errorLogger({ winstonInstance: logger }))
 }

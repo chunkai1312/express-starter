@@ -7,45 +7,33 @@ const config = require('../config')
 
 const logger = new winston.Logger({
   transports: [
-    new DailyRotateFile({
-      name: 'debug-file',
-      level: 'debug',
-      filename: path.join(config.root, 'logs', 'all.log'),
-      handleExceptions: true,
-      json: true,
-      colorize: false
-    }),
-    new DailyRotateFile({
-      name: 'warn-file',
-      level: 'warn',
-      filename: path.join(config.root, 'logs', 'warn.log'),
-      handleExceptions: true,
-      json: true,
-      colorize: false
-    }),
-    new DailyRotateFile({
-      name: 'error-file',
-      level: 'error',
-      filename: path.join(config.root, 'logs', 'error.log'),
-      handleExceptions: true,
-      json: true,
-      colorize: false
-    }),
     new winston.transports.Console({
       level: 'debug',
       handleExceptions: true,
       json: false,
       colorize: true,
       prettyPrint: true
+    }),
+    new DailyRotateFile({
+      name: 'log-file',
+      level: 'info',
+      handleExceptions: true,
+      json: true,
+      colorize: false,
+      filename: path.join(config.root, 'logs', 'log'),
+      datePattern: '_yyyyMMdd.json'
+    }),
+    new DailyRotateFile({
+      name: 'error-file',
+      level: 'error',
+      handleExceptions: true,
+      json: true,
+      colorize: false,
+      filename: path.join(config.root, 'logs', 'error'),
+      datePattern: '_yyyyMMdd.json'
     })
   ],
   exitOnError: false
 })
-
-logger.stream = {
-  write (message, encoding) {
-    logger.info(message)
-  }
-}
 
 module.exports = logger

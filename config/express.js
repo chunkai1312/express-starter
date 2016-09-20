@@ -9,6 +9,7 @@ const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const methodOverride = require('method-override')
 const morgan = require('morgan')
+const expressWinston = require('express-winston')
 const config = require('../config')
 const logger = require('./logger')
 
@@ -26,11 +27,7 @@ module.exports = function (app) {
   app.use(methodOverride())
   app.use(express.static(path.join(config.root, 'public')))
 
-  if (app.get('env') === 'development' || app.get('env') === 'test') {
-    app.use(morgan('dev'))
-  }
-
-  if (app.get('env') === 'production') {
-    app.use(morgan('dev', { stream: logger.stream }))
-  }
+  app.get('env') === 'development'
+    ? app.use(morgan('dev'))
+    : app.use(expressWinston.logger({ winstonInstance: logger }))
 }
